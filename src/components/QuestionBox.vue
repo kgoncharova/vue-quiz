@@ -30,6 +30,7 @@
       <b-button 
         variant="success"
         @click="next"
+        :disabled="lastQ"
       >
         Next
       </b-button>
@@ -44,7 +45,8 @@
     props: {
       currentQuestion: Object,
       next: Function,
-      increment: Function
+      increment: Function,
+      lastQ: Boolean
     },
     data() {
       return {
